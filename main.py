@@ -34,7 +34,7 @@ elif str(choice) == "1":
       print("Your password must be under 72 characters!")
     with open("file.json", "w") as f:
       userbio = "This user has no bio!"
-      email = input("What is your email?")
+      email = input("\nWhat is your email?\n")
       id = random.randint(1000000, 9999999)
       if id in uname:
         id = random.randint(1000000, 9999999)

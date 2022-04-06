@@ -1,4 +1,4 @@
-import json
+import json, random
 
 choice = input("""
                   ______________
@@ -28,18 +28,33 @@ if str(choice) == "1":
       print("Your password must be under 72 characters!")
     # open it in write mode because r+ exists but fuck you im doing it this way
     with open("file.json", "w") as f:
-      uname[str(username)] = password
+      userbio = "This user has no bio!"
+      email = "totallyrealemail69420@gmail.com"
+      id = random.randint(1000000, 9999999)
+      if id in uname:
+        id = random.randint(1000000, 9999999)
+        if id in uname:
+          id = random.randint(1000000, 9999999)
+          if id in uname:
+            id = random.randint(1000000, 9999999)
+            if id in uname:
+                id = random.randint(1000000, 9999999)
+                if id in uname:
+                    id = random.randint(1000000, 9999999)
+      uname[str(username)] = {"username": username, "password": password, "email": email, "bio": userbio, "id": id}
       json.dump(uname, f, indent=2)
+      print(f"Created {uname[str(username)]['username']}")
+      print(f"Your id is {uname[username]['id']}")
     print("\nDone!\nSign in by selecting 2 at this selection screen!\nAccount created!")
 else:
   with open("file.json", "r") as f:
     uname = json.load(f)
   username = input("\nWhats your username?\n\n")
-  if uname.get(username) is None:
+  if username not in uname:
     print("That username is invalid! Check capitalisation! Or that username might not be taken!")
   else:
     password = input(f"\nWhat is the password for {username}?\n\n")
-    if password != uname.get(username):
+    if password != uname[username]['password']:
       print("\nYour password is WRONG, try again and check for typos!")
     else:
       print(f"\nNow logged in as {username}!")
@@ -54,3 +69,5 @@ else:
                   |  6. Sign Out          |
                   |_______________________|
 \n\n""")
+      if str(selection) == "1":
+        d = input(f"Are you sure you want to delete your account {username}?")

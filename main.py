@@ -70,4 +70,13 @@ else:
                   |_______________________|
 \n\n""")
       if str(selection) == "1":
-        d = input(f"Are you sure you want to delete your account {username}?")
+        d = input(f"Are you sure you want to delete your account {username}?\n")
+        if d.lower() in ["n", "no", "cancel", "nope", "nah", "nuh"]:
+          print("\nAccount not deleted. You may exit safely now.")
+        elif d.lower() in ["y", "yes", "sure", "ok", "yuh", "yessir", "okay", "confirm", "continue", "yea"]:
+          with open("file.json", "r") as f:
+            data = json.load(f)
+          with open("file.json", "w") as f:
+            data.pop(username)
+            json.dump(data, f, indent=2)
+          print("\nAccount deleted, you cannot go back now.")

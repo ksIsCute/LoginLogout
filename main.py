@@ -87,9 +87,21 @@ else:
           print("\nAccount deleted, you cannot go back now. But you can create another. We're sorry to see you go!")
       elif str(selection) == "2":
         with open("file.json", "r") as f:
-          data = json.load(f)   
+          data = json.load(f) 
+        notifications = []
         for notification in data[username]['notifications']:
-          print(notification)
+          notifications.append(notification)
+          print(f"""\n
+                  _________________________
+                  |    {len(data[username]['notifications'])} Notifications    |
+                  |     {', '.join(notifications)}   |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |                       |
+                  |_______________________|
+\n""")
       elif str(selection) == "3":
         with open("file.json", "r") as f:
           data = json.load(f)

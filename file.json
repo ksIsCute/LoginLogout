@@ -1,37 +1,27 @@
 {
-  "test1": {
-    "username": "test1",
-    "password": "gaminggamers",
-    "email": "totallyrealemail69420@gmail.com",
-    "bio": "This user has no bio!",
-    "id": 5871442
-  },
-  "tester": {
-    "username": "tester",
-    "password": "12345678",
-    "email": "totallyrealemail69420@gmail.com",
-    "bio": "This user has no bio!",
-    "id": 7071988
-  },
-  "gaming": {
-    "username": "gaming",
-    "password": "12345678",
-    "email": "totallyrealemail69420@gmail.com",
-    "bio": "This user has no bio!",
-    "id": 7071987
-  },
-  "gamers": {
-    "username": "gamers",
-    "password": "gaminggamers",
-    "email": "totallyrealemail69420@gmail.com",
-    "bio": "This user has no bio!",
-    "id": 7071989
-  },
   "ks": {
     "username": "ks",
-    "password": "ksIsCute!",
-    "email": "ksiscute@business.com",
+    "password": "ksiscute",
+    "email": "a",
     "bio": "This user has no bio!",
-    "id": 8684386
+    "id": 1985283,
+    "friends": [],
+    "notifications": [
+      "testing",
+      "Apr | ks",
+      "Apr Wed | hi",
+      "Apr 06 | new update"
+    ]
+  },
+  "tom": {
+    "username": "tom",
+    "password": "tomandjerry",
+    "email": "a",
+    "bio": "This user has no bio!",
+    "id": 8250437,
+    "friends": [],
+    "notifications": [
+      "Apr 06 | new update"
+    ]
   }
 }

@@ -29,7 +29,7 @@ if str(choice) == "1":
     # open it in write mode because r+ exists but fuck you im doing it this way
     with open("file.json", "w") as f:
       userbio = "This user has no bio!"
-      email = "totallyrealemail69420@gmail.com"
+      email = input("What is your email?")
       id = random.randint(1000000, 9999999)
       if id in uname:
         id = random.randint(1000000, 9999999)
@@ -64,7 +64,7 @@ else:
                   |  1. Delete Account    |
                   |  2. Change password   |
                   |  3. Change username   |
-                  |  4. Profile Settings  |
+                  |  4. Settings          |
                   |  5. Your Profile      |
                   |  6. Sign Out          |
                   |_______________________|
@@ -79,4 +79,40 @@ else:
           with open("file.json", "w") as f:
             data.pop(username)
             json.dump(data, f, indent=2)
-          print("\nAccount deleted, you cannot go back now.")
+          print("\nAccount deleted, you cannot go back now. But you can create another. We're sorry to see you go!")
+      elif str(selection) == "2":
+        opw = input("Enter old password:\n")
+        if opw != uname[username]['password']:
+          print("\nWrong password!")
+        elif opw == uname[username]['password']:
+          npw = input("\nCorrect password! Please enter your new password:\n")
+          with open("file.json", "w") as f:
+            uname[username]["password"] = npw
+            json.dump(uname, f, indent=2)
+          print("Password changed")
+      elif str(selection) == "3":
+        nun = input("\nChoose a new username:\n")
+        with open("file.json", "r") as f:
+          uname = json.load(f)
+        with open("file.json", "w") as f:
+          if nun in uname:
+            print("Username taken! Sorry!")
+          else:
+            uname[nun] = {"username": nun, "password": uname[username]['password'], "email": uname[username]['email'], "bio": uname[username]['bio'], "id": uname[username]['id']}
+            uname.pop(username)
+            json.dump(uname, f, indent=2)
+      elif str(selection) == "4":
+        with open("file.json", "r") as f:
+          uname = json.load(f)
+        print("""
+                  _________________________
+                  |                       |
+                  |  1. Set Bio           |
+                  |  2. Change Email      |
+                  |  3. Add friend        |
+                  |  4. Settings          |
+                  |  5. Set your status   |
+                  |  6. Sign Out          |
+                  |_______________________|
+              """)
+        print("a")

@@ -1,9 +1,37 @@
 {
-  "testine2": {
-    "username": "testine2",
-    "password": "testingtestoserone",
+  "test1": {
+    "username": "test1",
+    "password": "gaminggamers",
     "email": "totallyrealemail69420@gmail.com",
     "bio": "This user has no bio!",
-    "id": 6905524
+    "id": 5871442
+  },
+  "tester": {
+    "username": "tester",
+    "password": "12345678",
+    "email": "totallyrealemail69420@gmail.com",
+    "bio": "This user has no bio!",
+    "id": 7071988
+  },
+  "gaming": {
+    "username": "gaming",
+    "password": "12345678",
+    "email": "totallyrealemail69420@gmail.com",
+    "bio": "This user has no bio!",
+    "id": 7071987
+  },
+  "gamers": {
+    "username": "gamers",
+    "password": "gaminggamers",
+    "email": "totallyrealemail69420@gmail.com",
+    "bio": "This user has no bio!",
+    "id": 7071989
+  },
+  "ks": {
+    "username": "ks",
+    "password": "ksIsCute!",
+    "email": "ksiscute@business.com",
+    "bio": "This user has no bio!",
+    "id": 8684386
   }
 }
